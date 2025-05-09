@@ -1,3 +1,3 @@
-import Root from "./Root/Root";
+import { Root } from "./Root/Root";
 
 customElements.define('root-element', Root);

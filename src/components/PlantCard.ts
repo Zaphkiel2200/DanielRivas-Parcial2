@@ -23,8 +23,12 @@ export class PlantCard extends HTMLElement {
                     height: 150px;
                     object-fit: cover;
                 }
-                h3 { margin: 5px 0; color: green; }
-                p { margin: 0; font-style: italic; color: #666; }
+                h3 { 
+                margin: 5px 0; color: green; 
+                }
+                p { 
+                margin: 0; font-style: italic; color: #666; 
+                }
             </style>
             <div class="card">
                 <img src="${img}" alt="${commonName}">
