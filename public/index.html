@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Demo</title>
+    <style>
+        
+        body {
+            margin: 20;
+            padding: 35;
+        }
+
+        header {
+            margin-top: 3rem;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            size: 10rem;
+            color: darkblue;
+        }
+
+        h2 {
+            size: 4rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        button {
+            border-radius: 10px;
+            border-color: brown;
+        }
+
+
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Las Plantas </h1>
+        <br><h2>Parcial 2 - Daniel F Rivas</h2></br>
+    </header>
+    
+    <nav>
+
+        <button id="home-btn">Inicio</button>
+        <button id="garden-btn">Modificar Jardín</button>
+        <button id="admin-btn">Modificar Plantas (Admin)</button> 
+    
+    
+    </nav>
+    
+        <header>
     <root-element></root-element>
     <script type="module" src="/bundle.js"></script>
 </body>

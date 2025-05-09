@@ -1,20 +1,41 @@
 import { store } from '../flux/Store';
+import { getPlants } from '../services/Plants';
+import '../components/PlantCard';
 
-class Root extends HTMLElement {
+export class Root extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
 
-    connectedCallback() {
-        this.render();
+    async connectedCallback() {
+        const plants = await getPlants();
+        this.renderPlants(plants);
     }
 
-    render() {
+    renderPlants(plants: any[]) {
         if (!this.shadowRoot) return;
-
-        this.shadowRoot.innerHTML = `app`;
+        
+        this.shadowRoot.innerHTML = `
+            <style>
+                .plants-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                    gap: 1rem;
+                    padding: 1rem;
+                }
+            </style>
+            <div class="plants-container">
+                ${plants.map(plant => `
+                    <plant-card
+                        common-name="${plant.commonName}"
+                        scientific-name="${plant.scientificName}"
+                        img="${plant.img}"
+                    ></plant-card>
+                `).join('')}
+            </div>
+        `;
     }
 }
 
-export default Root;
+customElements.define('root-element', Root);
