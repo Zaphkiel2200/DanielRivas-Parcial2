@@ -1,4 +1,3 @@
-// src/services/Plants.ts
 export interface Plant {
     id: number;
     commonName: string;
