@@ -12,12 +12,6 @@ export interface Plant {
 }
 
 export async function getPlants(): Promise<Plant[]> {
-    try {
-        const response = await fetch('http://192.168.131.101:8080/dca/api/plants');
-        if (!response.ok) throw new Error('Error al cargar plantas');
-        return await response.json();
-    } catch (error) {
-        console.error('Error fetching plants:', error);
-        return [];
-    }
+    const response = await fetch('http://192.168.131.101:8080/dca/api/plants');
+    return await response.json();
 }
