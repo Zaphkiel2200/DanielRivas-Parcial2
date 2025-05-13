@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../template-parcial-2-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DanielRivas-Parcial2"
+	}
+}
