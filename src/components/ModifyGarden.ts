@@ -102,9 +102,9 @@ class ModifyGarden extends HTMLElement {
       </style>
       
       <div class="modify-container">
-        <button class="back-button" id="backBtn">← Volver</button>
+        <button class="back-button" id="backBtn">← Regresar</button>
         <div class="header">
-          <h2>Modificar Mi Jardín</h2>
+          <h2>Modificar las Plantas</h2>
         </div>
         <div class="plants-grid">
           ${plants.map((plant, index) => {

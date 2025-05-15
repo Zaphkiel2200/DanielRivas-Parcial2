@@ -181,7 +181,7 @@ class AdminModifyPlants extends HTMLElement {
       </style>
       
       <div class="admin-container">
-        <button class="back-button" id="backBtn">← Volver</button>
+        <button class="back-button" id="backBtn">← Regresar</button>
         <h2 class="admin-title">Modificar Plantas</h2>
         
         ${this.selectedPlant ? `

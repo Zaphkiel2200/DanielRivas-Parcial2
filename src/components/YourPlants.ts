@@ -95,12 +95,6 @@ class YourPlants extends HTMLElement {
           cursor: pointer;
         }
       </style>
-      
-      <div class="container">
-        <div class="header">
-          <h2 class="garden-name">${gardenName}</h2>
-          <p>Plantas en tu jardín</p>
-        </div>
         
         ${yourPlants.length > 0 ? `
           <div class="plants-grid">
@@ -114,8 +108,8 @@ class YourPlants extends HTMLElement {
           </div>
         ` : `
           <div class="no-plants">
-            <p>No hay plantas en tu jardín</p>
-            <button id="add-plants-btn" class="add-plants-btn">Añadir plantas</button>
+            <p>No hay plantas</p>
+            <button id="add-plants-btn" class="add-plants-btn">Añade algunas plantas</button>
           </div>
         `}
       </div>
@@ -133,14 +127,14 @@ class YourPlants extends HTMLElement {
         input.addEventListener("blur", () => {
           StoreActions.updateGardenName(input.value);
           input.replaceWith(gardenNameInput);
-          gardenNameInput.textContent = input.value || "Mi Jardín";
+          gardenNameInput.textContent = input.value || "";
         });
         
         input.addEventListener("keypress", (e) => {
           if (e.key === "Enter") {
             StoreActions.updateGardenName(input.value);
             input.replaceWith(gardenNameInput);
-            gardenNameInput.textContent = input.value || "Mi Jardín";
+            gardenNameInput.textContent = input.value || "";
           }
         });
       });

@@ -60,10 +60,6 @@ class CardContainer extends HTMLElement {
         }
       </style>
       
-      <div class="header">
-        <h1>Catálogo de Plantas</h1>
-        <p>Explora nuestra colección de plantas</p>
-      </div>
       <div class="container">
         ${plants.map((plant, index) => `
           <card-plants
