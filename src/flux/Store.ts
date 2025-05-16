@@ -16,7 +16,7 @@ class Store {
   private _myState: State = {
     count: 0,
     addedPlants: [],
-    gardenName: "Mi Jardín Virtual",
+    gardenName: "El Jardín",
     plants: [],
     currentPage: "home",
   };
@@ -60,13 +60,11 @@ class Store {
           const plantIndex = currentPlants.indexOf(plantId);
 
           if (plantIndex === -1) {
-            //se agrega
             this._myState = {
               ...this._myState,
               addedPlants: [...currentPlants, plantId],
             };
           } else {
-            //se quta
             this._myState = {
               ...this._myState,
               addedPlants: currentPlants.filter((id) => id !== plantId),
