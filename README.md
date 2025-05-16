@@ -1,1 +1,2 @@
-# DanielRivas-Parcial2
+Nombre Completo: DANIEL FELIPE RIVAS ULCHUR
+Codigo: A00405514
