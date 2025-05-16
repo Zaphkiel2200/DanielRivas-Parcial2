@@ -41,16 +41,14 @@ class Root extends HTMLElement {
         :host {
           display: block;
           font-family: Arial, sans-serif;
-          --primary-color: #3498db;
-          --secondary-color: #2980b9;
-          --text-color: #2c3e50;
+          --text-color:rgb(0, 0, 0);
           --light-color: #f8f9fa;
           --border-color: #ddd;
         }
         
         header {
           background: var(--primary-color);
-          color: white;
+          color: black;
           padding: 1rem;
           text-align: center;
         }
